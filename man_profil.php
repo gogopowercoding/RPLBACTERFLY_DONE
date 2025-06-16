@@ -15,13 +15,11 @@ if (!isset($_SESSION['id'])) {
     exit;
 }
 
-// Periksa koneksi database
 if (!$pdo) {
     error_log("Koneksi PDO gagal di profile.php");
     die("Koneksi gagal: Periksa konfigurasi database.");
 }
 
-// Ambil data pengguna
 $user_id = $_SESSION['id'];
 $query = "SELECT nama, division FROM users WHERE id = :id";
 $stmt = $pdo->prepare($query);
@@ -208,22 +206,22 @@ try {
     </main>
 
     <div class="bottom-nav">
-        <a href="manajer.php">
-            <img src="images/home.png" alt="Beranda">
-            <span>Beranda</span>
-        </a>
-        <a href="pengawasan.php">
-            <img src="images/clock.png" alt="Pengawasan">
-            <span>Pengawasan</span>
-        </a>
-        <a href="list_manajer.php">
-            <img src="images/list.png" alt="Daftar">
-            <span>Daftar</span>
-        </a>
-        <a href="profil_manajer.php" class="active">
-            <img src="images/profile.png" alt="Profil">
-            <span>Profil</span>
-        </a>
+        <a href="man_dashboard.php">
+                <span>🏠</span>
+                <span>Home</span>
+            </a>
+            <a href="man_pengawasan.php" class="active">
+                <span>🕒</span>
+                <span>Data</span>
+            </a>
+            <a href="man_intruksi.php">
+                <span>📋</span>
+                <span>Instruksi</span>
+            </a>
+            <a href="man_profil.php">
+                <span>👤</span>
+                <span>Profil</span>
+            </a>
     </div>
 
 </body>
