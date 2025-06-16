@@ -39,10 +39,10 @@ if (isset($_POST['login'])) {
                 header("Location: lab_dashboard.php");
                 break;
             case 'produksi':
-                header("Location: pilih_bidang.php");
+                header("Location: pro_dashboard.php");
                 break;
             case 'manajer':
-                header("Location: manajer.php");
+                header("Location: man_dashboard.php");
                 break;
             default:
                 header("Location: home.php"); // Jika divisi tidak terdefinisi

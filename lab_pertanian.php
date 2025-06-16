@@ -191,6 +191,12 @@ try {
                 </div>
             <?php endforeach; ?>
         <?php endif; ?>
+        <div style="text-align: center; margin: 10px;">
+        <button onclick="location.href='lab_tambahbakteri.php?kategori=Pertanian'" style="background:#FFA347; color:black; padding:10px 20px; border:none; border-radius:5px;">
+        ➕
+        </button>
+    </div>
+
     </div>
 
     <div class="bottom-nav">

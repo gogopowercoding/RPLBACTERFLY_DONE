@@ -243,15 +243,15 @@ try {
 
         <main>
             <div class="grid">
-                <div class="card" onclick="location.href='inokulasi_peternakan.php'">
+                <div class="card" onclick="location.href='lab_peternakan.php'">
                     <img src="assets/cow-icon.png" alt="Peternakan" />
                     <span>Peternakan</span>
                 </div>
-                <div class="card" onclick="location.href='inokulasi_perikanan.php'">
+                <div class="card" onclick="location.href='lab_perikanan.php'">
                     <img src="assets/fish-icon.png" alt="Perikanan" />
                     <span>Perikanan</span>
                 </div>
-                <div class="card" onclick="location.href='inokulasi_pertanian.php'">
+                <div class="card" onclick="location.href='lab_pertanian.php'">
                     <img src="assets/plant-icon.png" alt="Pertanian" />
                     <span>Pertanian</span>
                 </div>

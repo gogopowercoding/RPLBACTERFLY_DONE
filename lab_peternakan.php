@@ -7,7 +7,7 @@ if (!$pdo) {
 }
 
 // Ambil data dari tabel datainokulasi dengan kategori 'Peternakan' dan pengurutan berdasarkan inokulasi_id
-$query = "SELECT inokulasi_id, Laboratorium_id, Manager_id, kategori, nama_bakteri, media, metode_inokulasi, tanggal_inokulasi, status_kualitas, jumlah_bakteri, tanggal_keluar, inokulasi_berhasil FROM datainokulasi WHERE kategori = 'Perikanan' ORDER BY inokulasi_id DESC";
+$query = "SELECT inokulasi_id, Laboratorium_id, Manager_id, kategori, nama_bakteri, media, metode_inokulasi, tanggal_inokulasi, status_kualitas, jumlah_bakteri, tanggal_keluar, inokulasi_berhasil FROM datainokulasi WHERE kategori = 'Peternakan' ORDER BY inokulasi_id DESC";
 $stmt = $pdo->prepare($query);
 
 try {
@@ -169,7 +169,7 @@ try {
     </header>
 
     <div class="report-section">
-        <h2>Inokulasi Perikanan</h2>
+        <h2>Inokulasi Peternakan</h2>
         <?php if (empty($results)): ?>
             <p>Tidak ada data inokulasi.</p>
         <?php else: ?>
@@ -191,6 +191,11 @@ try {
                 </div>
             <?php endforeach; ?>
         <?php endif; ?>
+        <div style="text-align: center; margin: 10px;">
+        <button onclick="location.href='lab_tambahbakteri.php?kategori=Peternakan'" style="background:#FFA347; color:black; padding:10px 20px; border:none; border-radius:5px;">
+        ➕
+        </button>
+    </div>
     </div>
 
     <div class="bottom-nav">
