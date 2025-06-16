@@ -1,17 +1,14 @@
 <?php
 session_start();
 
-// Sertakan file koneksi
 require_once 'koneksi.php';
 
-// Pemeriksaan session
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true || !isset($_SESSION['id'])) {
-    // Jika belum login, arahkan ke halaman login
+   
     header("Location: login.php");
     exit();
 }
 
-// Fetch user data with prepared statement
 $id_user = $_SESSION['id'];
 $query = "SELECT nama, division FROM users WHERE id = ?";
 $stmt = $pdo->prepare($query);

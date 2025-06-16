@@ -357,7 +357,7 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <span>📋</span>
             <span>Instruksi</span>
         </a>
-        <a href="profil_manajer.php">
+        <a href="lab_profil.php">
             <span>👤</span>
             <span>Profil</span>
         </a>
